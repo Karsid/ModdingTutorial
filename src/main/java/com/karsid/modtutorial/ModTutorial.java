@@ -61,6 +61,7 @@ package com.karsid.modtutorial;
  **/
 
 
+import com.karsid.modtutorial.configuration.ConfigurationHandler;
 import com.karsid.modtutorial.proxy.IProxy;
 import com.karsid.modtutorial.reference.Reference;
 import cpw.mods.fml.common.Mod;
@@ -81,7 +82,7 @@ public class ModTutorial {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-
+        ConfigurationHandler.init(event.getSuggestedConfigurationFile());
     }
 
     @Mod.EventHandler
