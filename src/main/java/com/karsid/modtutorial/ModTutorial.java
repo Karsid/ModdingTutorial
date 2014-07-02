@@ -61,18 +61,17 @@ package com.karsid.modtutorial;
  **/
 
 
-import com.karsid.modtutorial.configuration.ConfigurationHandler;
+import com.karsid.modtutorial.handler.ConfigurationHandler;
 import com.karsid.modtutorial.proxy.IProxy;
 import com.karsid.modtutorial.reference.Reference;
+import com.karsid.modtutorial.utility.LogHelper;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-import java.sql.Ref;
-
-@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
 public class ModTutorial {
     @Mod.Instance(Reference.MOD_ID)
     public static ModTutorial instance;
@@ -83,15 +82,16 @@ public class ModTutorial {
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
+        LogHelper.info("Pre Initialisation Complete!");
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
-
+        LogHelper.info("Initialisation Complete!");
     }
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
-
+        LogHelper.info("Post Initialisation Complete!");
     }
 }
