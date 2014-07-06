@@ -42,6 +42,17 @@ package com.karsid.modtutorial;
  **/
 
 /**
+  *  To get the latest version of forge:
+  *      - update your build.gradle and change
+  *          minecraft -> version
+  *        to what version of forge you want
+  *      - from the command prompt type
+  *          gradlew clean
+  *          gradlew setupDecompWorkspace
+  *          gradlew idea
+ **/
+
+/**
   * To package up the code you need to:
   *    - go to your forge/mcp directory
   *    - run the recompile.bat script
@@ -60,8 +71,16 @@ package com.karsid.modtutorial;
   *    MCModeler (http://caffeinix.github.io/mcmodeler/)
  **/
 
+/**
+  *  Minencraft commands helper:
+  *     - /give ForgeCraftDev ModTutorial:xxx
+  *     - /gamerule doDaylightCycle false
+  *     - /time set 6000
+ **/
+
 
 import com.karsid.modtutorial.handler.ConfigurationHandler;
+import com.karsid.modtutorial.init.ModItems;
 import com.karsid.modtutorial.proxy.IProxy;
 import com.karsid.modtutorial.reference.Reference;
 import com.karsid.modtutorial.utility.LogHelper;
@@ -84,6 +103,9 @@ public class ModTutorial {
     public void preInit(FMLPreInitializationEvent event) {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
+
+        ModItems.init();
+
         LogHelper.info("Pre Initialisation Complete!");
     }
 
