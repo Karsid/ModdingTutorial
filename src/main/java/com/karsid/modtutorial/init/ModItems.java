@@ -8,12 +8,12 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 @GameRegistry.ObjectHolder(Reference.MOD_ID)
 public class ModItems {
-    public static final ItemMT tutorialAxe = new ItemAxe();
-    public static final ItemMT tutorialHoe = new ItemHoe();
-    public static final ItemMT tutorialIngot = new ItemIngot();
-    public static final ItemMT tutorialPickaxe = new ItemPickaxe();
-    public static final ItemMT tutorialShovel = new ItemShovel();
-    public static final ItemMT tutorialSword = new ItemSword();
+    public static final ItemMT tutorialAxe = new ItemMTAxe();
+    public static final ItemMT tutorialHoe = new ItemMTHoe();
+    public static final ItemMT tutorialIngot = new ItemMTIngot();
+    public static final ItemMT tutorialPickaxe = new ItemMTPickaxe();
+    public static final ItemMT tutorialShovel = new ItemMTShovel();
+    public static final ItemMT tutorialSword = new ItemMTSword();
 
     public static void init() {
         GameRegistry.registerItem(tutorialAxe, Names.Items.AXE);

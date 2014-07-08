@@ -5,8 +5,8 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 
-public class BlockOre extends BlockMT {
-    public BlockOre() {
+public class BlockMTOre extends BlockMT {
+    public BlockMTOre() {
         super(Material.rock);
         this.setBlockName(Names.Blocks.ORE);
         this.setBlockTextureName(Names.Blocks.ORE);

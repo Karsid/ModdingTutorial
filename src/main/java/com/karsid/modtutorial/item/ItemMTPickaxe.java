@@ -3,10 +3,10 @@ package com.karsid.modtutorial.item;
 import com.karsid.modtutorial.reference.Names;
 import net.minecraft.creativetab.CreativeTabs;
 
-public class ItemShovel extends ItemMT {
-    public ItemShovel () {
+public class ItemMTPickaxe extends ItemMT {
+    public ItemMTPickaxe() {
         super();
-        this.setUnlocalizedName(Names.Items.SHOVEL);
+        this.setUnlocalizedName(Names.Items.PICKAXE);
         this.setCreativeTab(CreativeTabs.tabTools);
     }
 }
