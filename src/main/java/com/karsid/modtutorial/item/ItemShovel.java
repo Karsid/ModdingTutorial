@@ -1,8 +1,12 @@
 package com.karsid.modtutorial.item;
 
-public class ItemShovel extends ItemMTB {
+import com.karsid.modtutorial.reference.Names;
+import net.minecraft.creativetab.CreativeTabs;
+
+public class ItemShovel extends ItemMT {
     public ItemShovel () {
         super();
-        this.setUnlocalizedName("tutorialShovel");
+        this.setUnlocalizedName(Names.Items.SHOVEL);
+        this.setCreativeTab(CreativeTabs.tabTools);
     }
 }

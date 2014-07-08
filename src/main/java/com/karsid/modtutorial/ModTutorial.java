@@ -80,6 +80,7 @@ package com.karsid.modtutorial;
 
 
 import com.karsid.modtutorial.handler.ConfigurationHandler;
+import com.karsid.modtutorial.init.ModBlocks;
 import com.karsid.modtutorial.init.ModItems;
 import com.karsid.modtutorial.proxy.IProxy;
 import com.karsid.modtutorial.reference.Reference;
@@ -104,6 +105,7 @@ public class ModTutorial {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
 
+        ModBlocks.init();
         ModItems.init();
 
         LogHelper.info("Pre Initialisation Complete!");

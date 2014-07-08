@@ -1,8 +1,12 @@
 package com.karsid.modtutorial.item;
 
-public class ItemSword extends ItemMTB {
+import com.karsid.modtutorial.reference.Names;
+import net.minecraft.creativetab.CreativeTabs;
+
+public class ItemSword extends ItemMT {
     public ItemSword() {
         super();
-        this.setUnlocalizedName("tutorialSword");
+        this.setUnlocalizedName(Names.Items.SWORD);
+        this.setCreativeTab(CreativeTabs.tabCombat);
     }
 }

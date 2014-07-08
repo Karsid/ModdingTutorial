@@ -1,8 +1,12 @@
 package com.karsid.modtutorial.item;
 
-public class ItemAxe extends ItemMTB {
+import com.karsid.modtutorial.reference.Names;
+import net.minecraft.creativetab.CreativeTabs;
+
+public class ItemAxe extends ItemMT {
     public ItemAxe () {
         super();
-        this.setUnlocalizedName("tutorialAxe");
+        this.setUnlocalizedName(Names.Items.AXE);
+        this.setCreativeTab(CreativeTabs.tabTools);
     }
 }

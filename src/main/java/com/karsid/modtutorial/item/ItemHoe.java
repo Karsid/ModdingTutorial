@@ -1,8 +1,12 @@
 package com.karsid.modtutorial.item;
 
-public class ItemHoe extends ItemMTB {
+import com.karsid.modtutorial.reference.Names;
+import net.minecraft.creativetab.CreativeTabs;
+
+public class ItemHoe extends ItemMT {
     public ItemHoe () {
         super();
-        this.setUnlocalizedName("tutorialHoe");
+        this.setUnlocalizedName(Names.Items.HOE);
+        this.setCreativeTab(CreativeTabs.tabTools);
     }
 }
