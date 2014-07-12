@@ -1,6 +1,8 @@
 package com.karsid.modtutorial.item;
 
+import com.karsid.modtutorial.creativetab.CreativeTabMT;
 import com.karsid.modtutorial.reference.Textures;
+import com.karsid.modtutorial.utility.LogHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -10,6 +12,7 @@ import net.minecraft.item.ItemStack;
 public class ItemMT extends Item {
     public ItemMT(){
         super();
+        this.setCreativeTab(CreativeTabMT.MT_TAB);
         this.maxStackSize = 1;
     }
 
@@ -29,7 +32,7 @@ public class ItemMT extends Item {
         itemIcon = iconRegister.registerIcon(this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".") + 1));
     }
 
-    protected String getUnwrappedUnlocalizedName (String unlocalisedName) {
-        return unlocalisedName.substring(unlocalisedName.indexOf(".") + 1);
+    protected String getUnwrappedUnlocalizedName(String unlocalizedName) {
+        return unlocalizedName.substring(unlocalizedName.indexOf(".") + 1);
     }
 }

@@ -31,7 +31,6 @@ archivesBaseName = "ModTutorial"
 
 minecraft {
     version = config.minecraft_version + "-" + config.forge_version
-    assetDir = "eclipse/assets"
 
     replaceIn "reference/Reference.java"
     replace "@VERSION@", "${config.mod_version}.${System.getenv("BUILD_NUMBER") ?: 0}"
@@ -64,7 +63,7 @@ processResources {
         include '*.info'
                 
         // replace version and mcversion
-        expand 'mod_version': project.version, 'minecraft_version': project.config.minecraft_version
+        expand 'mod_version': project.config.version, 'minecraft_version': project.config.minecraft_version
     }
         
     // copy everything else, thats not the mcmod.info

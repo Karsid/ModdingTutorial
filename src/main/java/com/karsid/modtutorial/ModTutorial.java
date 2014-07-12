@@ -53,6 +53,14 @@ package com.karsid.modtutorial;
  **/
 
 /**
+ *  To get the latest version of gradle:
+ *      - from the command prompt type
+ *          gradlew clean --refresh-dependencies
+ *          gradlew setupDecompWorkspace
+ *          gradlew idea
+ **/
+
+/**
   * To package up the code you need to:
   *    - go to your forge/mcp directory
   *    - run the recompile.bat script
