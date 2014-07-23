@@ -58,6 +58,9 @@ package com.karsid.modtutorial;
  *          gradlew clean --refresh-dependencies
  *          gradlew setupDecompWorkspace
  *          gradlew idea
+ *      - make sure you DO NOT update forge at the same time
+ *        otherwise you get the ASSETS_INDEX issue and
+ *        need to do the forge update steps
  **/
 
 /**
@@ -90,6 +93,7 @@ package com.karsid.modtutorial;
 import com.karsid.modtutorial.handler.ConfigurationHandler;
 import com.karsid.modtutorial.init.ModBlocks;
 import com.karsid.modtutorial.init.ModItems;
+import com.karsid.modtutorial.init.Recipes;
 import com.karsid.modtutorial.proxy.IProxy;
 import com.karsid.modtutorial.reference.Reference;
 import com.karsid.modtutorial.utility.LogHelper;
@@ -99,6 +103,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.oredict.OreDictionary;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
 public class ModTutorial {
@@ -114,6 +119,7 @@ public class ModTutorial {
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
 
         ModBlocks.init();
+
         ModItems.init();
 
         LogHelper.info("Pre Initialisation Complete!");
@@ -121,11 +127,18 @@ public class ModTutorial {
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
+        Recipes.init();
+
         LogHelper.info("Initialisation Complete!");
     }
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
         LogHelper.info("Post Initialisation Complete!");
+
+        for (String oreName : OreDictionary.getOreNames()) {
+            LogHelper.info(oreName.toString());
+        }
+        OreDictionary.getOres("stickWood");
     }
 }

@@ -8,3 +8,5 @@ item.modtutorial:tutorialSword.name=ModTutorial Sword of Awesomeness
 tile.modtutorial:tutorialDirt.name=ModTutorial Dirt of Awesomeness
 tile.modtutorial:tutorialOre.name=ModTutorial Ore of Awesomeness
 tile.modtutorial:tutorialStone.name=ModTutorial Stone of Awesomeness
+
+itemGroup.modtutorial=Mod Tutorial
