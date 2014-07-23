@@ -1,5 +1,12 @@
 package com.karsid.modtutorial.init;
 
+/**
+  * When doing a recipe remember to use the generic types provided by forge i.e.
+  * don't use Items.stick when you can use "stickWood".
+  *
+  * You can find a list of the generic types in OreDictionary.java
+ **/
+
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.ShapedOreRecipe;
