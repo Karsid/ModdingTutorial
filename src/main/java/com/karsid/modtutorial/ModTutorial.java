@@ -50,6 +50,8 @@ package com.karsid.modtutorial;
   *          gradlew clean
   *          gradlew setupDecompWorkspace
   *          gradlew idea
+ *      - if you get the ASSETS_INDEX issue when running Minecraft
+ *        then re-run setupDecompWorkspace
  **/
 
 /**
@@ -58,9 +60,6 @@ package com.karsid.modtutorial;
  *          gradlew clean --refresh-dependencies
  *          gradlew setupDecompWorkspace
  *          gradlew idea
- *      - make sure you DO NOT update forge at the same time
- *        otherwise you get the ASSETS_INDEX issue and
- *        need to do the forge update steps
  **/
 
 /**
