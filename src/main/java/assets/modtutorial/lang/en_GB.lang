@@ -1,3 +1,7 @@
+# Creative Tabs
+itemGroup.modtutorial=Mod Tutorial
+
+# Items
 item.modtutorial:tutorialAxe.name=ModTutorial Axe of Awesomeness
 item.modtutorial:tutorialHoe.name=ModTutorial Hoe of Awesomeness
 item.modtutorial:tutorialIngot.name=ModTutorial Ingot of Awesomeness
@@ -5,8 +9,12 @@ item.modtutorial:tutorialPickaxe.name=ModTutorial Pickaxe of Awesomeness
 item.modtutorial:tutorialShovel.name=ModTutorial Shovel of Awesomeness
 item.modtutorial:tutorialSword.name=ModTutorial Sword of Awesomeness
 
+# Blocks
 tile.modtutorial:tutorialDirt.name=ModTutorial Dirt of Awesomeness
 tile.modtutorial:tutorialOre.name=ModTutorial Ore of Awesomeness
 tile.modtutorial:tutorialStone.name=ModTutorial Stone of Awesomeness
 
-itemGroup.modtutorial=Mod Tutorial
+# Keys
+keys.modtutorial.category=Mod Tutorial
+keys.modtutorial.charge=Charge
+keys.modtutorial.release=Release
